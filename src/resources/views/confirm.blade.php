@@ -5,7 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>内容確認</title>
-    {{-- css記述 --}}
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" >
+
 
 </head>
 
@@ -16,7 +18,7 @@
         </div>
 
         <div class="confirm-table">
-            <form action="/confirm/thanks" method="post" class="">
+            <form action="/confirm/thanks" method="post" >
             @csrf
                 <table class="confirm-table__inner">
                     <tr class="confirm-table__row">
