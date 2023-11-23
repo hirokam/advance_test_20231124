@@ -24,11 +24,11 @@
                         {{--エラー文追加--}}
                     </div>
                     <div class="last-name">
-                        <input class="last-name__input-area" type="text">
+                        <input class="last-name__input-area" type="text" name="last-name">
                         <p class="example">例）山田</p>
                     </div>
                     <div class="first-name">
-                        <input class="first-name__input-area" type="text">
+                        <input class="first-name__input-area" type="text" name="first-name">
                         <p class="example">例）太郎</p>
                     </div>
                 </div>
@@ -39,8 +39,8 @@
                         {{--エラー文追加--}}
                     </div>
                     <div class="gender">
-                        <label for="male"><input type="radio" class="gender-male" name="gender" id="male">男性</label>
-                        <label for="female"><input type="radio" class="gender-female" name="gender" id="female">女性</label>
+                        <label for="male"><input type="radio" class="gender-male" name="gender" value="男性" id="male">男性</label>
+                        <label for="female"><input type="radio" class="gender-female" name="gender" value="女" id="female">女性</label>
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@
                         {{--エラー文追加--}}
                     </div>
                     <div class="email">
-                        <input class="email__input-area" type="email">
+                        <input class="email__input-area" type="email" name="email">
                         <p class="example">例）test@example.com</p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                         {{--エラー文追加--}}
                     </div>
                     <div class="postcode">
-                        <label class="postcode__logo">〒<input class="postcode__input-area" type="text"></label>
+                        <label class="postcode__logo">〒<input class="postcode__input-area" type="text" name="postcode"></label>
                         <p class="example">例）123-4567</p>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                         {{--エラー文追加--}}
                     </div>
                     <div class="address">
-                        <input class="address__input-area" type="text">
+                        <input class="address__input-area" type="text" name="address">
                         <p class="example">例）東京都渋谷区千駄ヶ谷1-2-3</p>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                         <p>建物名</p>
                     </div>
                     <div class="building">
-                        <input class="building__input-area" type="text">
+                        <input class="building__input-area" type="text" name="building">
                         <p class="example">例）千駄ヶ谷マンション101</p>
                     </div>
                 </div>
