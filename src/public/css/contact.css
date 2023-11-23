@@ -1,0 +1,128 @@
+.content {
+    max-width: 1230px;
+    margin: 30px 150px;
+}
+
+.form__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.section-title {
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 180px;
+}
+
+span {
+    color: red;
+    margin-left: 5px;
+}
+
+.example {
+    color: gray;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+div.postcode p.example {
+    padding-left: 50px;
+}
+
+.last-name__input-area,
+.first-name__input-area,
+.email__input-area,
+.postcode__input-area,
+.address__input-area,
+.building__input-area,
+.opinion__input-area {
+    height: 50px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    width: 650px;
+}
+
+
+.name-section {
+    display: flex;
+}
+
+.last-name__input-area,
+.first-name__input-area {
+    width: 315px;
+}
+
+.first-name {
+    margin-left: 20px;
+}
+
+
+.gender-section {
+    display: flex;
+    align-items: center;
+}
+
+
+.email-section {
+    display: flex;
+}
+
+
+.postcode-section {
+    display: flex;
+}
+
+.postcode {
+    padding-left: 10px;
+}
+
+.postcode::before {
+    content: "〒";
+    font-weight: bold;
+}
+
+.postcode__input-area {
+    margin-left: 10px;
+    width: 610px;
+}
+
+.postcode__example {
+    padding-left: 60px;
+}
+
+
+.address-section {
+    display: flex;
+}
+
+
+.building-section {
+    display: flex;
+}
+
+
+.opinion-section {
+    display: flex;
+}
+
+.opinion__input-area {
+    width: 650px;
+    height: 150px;
+    resize: none;
+}
+
+.form__button {
+    margin: 30px;
+    text-align: center;
+}
+
+.button__submit {
+    width: 150px;
+    height: 50px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

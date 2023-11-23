@@ -5,7 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お問い合わせ</title>
-    {{-- css記述 --}}
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}" >
 
 </head>
 
@@ -61,7 +62,7 @@
                         {{--エラー文追加--}}
                     </div>
                     <div class="postcode">
-                        <label class="postcode__logo">〒<input class="postcode__input-area" type="text" name="postcode"></label>
+                        <input class="postcode__input-area" type="text" name="postcode">
                         <p class="example">例）123-4567</p>
                     </div>
                 </div>

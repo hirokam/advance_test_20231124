@@ -1,0 +1,55 @@
+.content {
+    max-width: 1230px;
+    margin: 30px 150px;
+}
+
+.form__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.confirm-table__inner {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirm-table__header {
+    text-align: left;
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 13px;
+    width: 180px;
+}
+
+td {
+    padding: 25px 0;
+}
+
+input {
+    border: none;
+    width: 640px;
+}
+
+.form__button {
+    text-align: center;
+}
+
+.button__submit {
+    background: black;
+    color: white;
+    width: 120px;
+    height: 35px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.form-correct__button {
+    text-align: center;
+}
+
+.form-correct__button a {
+    font-size: 12px;
+}
