@@ -5,7 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>管理システム</title>
-    {{-- css記述 --}}
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" >
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" >
 
 </head>
 
@@ -62,8 +63,11 @@
                 </div>
             </form>
         </div>
-{{-- ペジネーション --}}
 
+        <div class="pagenate">
+            {{ $contacts->links() }}
+        </div>
+        
         <div class="search__result">
             <table class="result">
                 <tr>
