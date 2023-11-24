@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-//use App\Models\Contact;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -20,7 +20,13 @@ class ContactController extends Controller
         return view('thanks');
     }
 
-//    public function index() {
-//        return view('index');
-//    }
+    public function index() {
+        $contacts = Contact::all();
+        return view('index', ['contacts' => $contacts]);
+    }
+
+    public function destroy(Request $request) {
+        Contact::find($request->id)->delete();
+        return redirect('/index');
+    }
 }
