@@ -16,6 +16,14 @@
             <h2>お問い合わせ</h2>
         </div>
 
+        @if (count($errors) > 0)
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+        @endif
+
         <div class="form__inner">
             <form action="/confirm" method="post" class="">
             @csrf
