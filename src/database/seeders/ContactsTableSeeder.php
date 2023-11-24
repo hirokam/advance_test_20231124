@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Contact;
 
 class ContactsTableSeeder extends Seeder
 {
@@ -15,7 +16,7 @@ class ContactsTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'fullname' => '田中一郎',
+            'fullname' => '田中 一郎',
             'gender' => '1',
             'email' => 'sample1@sample.com',
             'postcode' => '123-4567',
@@ -25,7 +26,7 @@ class ContactsTableSeeder extends Seeder
         ];
         DB::table('contacts')->insert($param);
         $param = [
-            'fullname' => '斉藤二郎',
+            'fullname' => '斉藤 二郎',
             'gender' => '1',
             'email' => 'sample2@sample.com',
             'postcode' => '234-5678',
@@ -35,7 +36,7 @@ class ContactsTableSeeder extends Seeder
         ];
         DB::table('contacts')->insert($param);
         $param = [
-            'fullname' => '佐藤しょうこ',
+            'fullname' => '佐藤 しょうこ',
             'gender' => '2',
             'email' => 'sample3@sample.com',
             'postcode' => '567-8912',
@@ -44,5 +45,7 @@ class ContactsTableSeeder extends Seeder
             'opinion' => 'これはサンプルです。'
         ];
         DB::table('contacts')->insert($param);
+    
+        Contact::factory()->count(32)->create();
     }
 }
