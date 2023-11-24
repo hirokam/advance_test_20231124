@@ -67,19 +67,29 @@
         <div class="search__result">
             <table class="result">
                 <tr>
-                    <th>id</th>
+                    <th>ID</th>
                     <th>お名前</th>
                     <th>性別</th>
                     <th>メールアドレス</th>
                     <th>ご意見</th>
                 </tr>
+                @foreach ($contacts as $contact)
                 <tr>
-                    <td>1（仮）</td>
-                    <td>サンプル</td>
-                    <td>サンプル</td>
-                    <td>サンプル</td>
-                    <td>サンプル</td>
+                    <td>{{$contact->id}}</td>
+                    <td>{{$contact->fullname}}</td>
+                    <td>{{$contact->gender}}</td>
+                    <td>{{$contact->email}}</td>
+                    <td>{{$contact->opinion}}</td>
+                    <td>
+                        <form action="/index" method="post"class="">
+                        @method('DELETE')
+                        @csrf
+                            <input type="hidden" name="id" value="{{ $contact['id'] }}" class="">
+                            <button class="">削除</button>
+                        </form>
+                    </td>
                 </tr>
+                @endforeach
             </table>
         </div>
     </div>
