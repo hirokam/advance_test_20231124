@@ -17,6 +17,10 @@
             <h2>内容確認</h2>
         </div>
 
+        @if (count($errors) > 0)
+        <p>入力に問題があります。</p>
+        @endif
+
         <div class="confirm-table">
             <form action="/confirm/thanks" method="post" >
             @csrf

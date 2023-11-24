@@ -126,3 +126,8 @@ div.postcode p.example {
     border: none;
     border-radius: 5px;
 }
+
+.error {
+    color: red;
+    font-size: 10px;
+}

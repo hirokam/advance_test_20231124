@@ -8,11 +8,11 @@ use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
-    public function contact(ContactRequest $request) {
+    public function contact(Request $request) {
         return view('contact');
     }
 
-    public function confirm(Request $request) {
+    public function confirm(ContactRequest $request) {
         $contact = $request->only(['last-name','first-name','gender','email','postcode','address','building','content']);
         $gender = $contact['gender'];
         $genderString = ($gender == 1) ? '男性' : '女性';
