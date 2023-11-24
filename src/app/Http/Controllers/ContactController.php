@@ -27,7 +27,7 @@ class ContactController extends Controller
     }
 
     public function index() {
-        $contacts = Contact::Paginate(2);
+        $contacts = Contact::Paginate(5);
         return view('index', ['contacts' => $contacts]);
     }
 
