@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
-    public function contact() {
+    public function contact(Request $request) {
         return view('contact');
     }
 
-    public function confirm(Request $request) {
+    public function confirm(ContactRequest $request) {
         $contact = $request->only(['last-name','first-name','gender','email','postcode','address','building','content']);
         $gender = $contact['gender'];
         $genderString = ($gender == 1) ? '男性' : '女性';
@@ -26,7 +27,7 @@ class ContactController extends Controller
     }
 
     public function index() {
-        $contacts = Contact::all();
+        $contacts = Contact::Paginate(2);
         return view('index', ['contacts' => $contacts]);
     }
 
