@@ -28,11 +28,11 @@
                         @enderror
                     </div>
                     <div class="last-name">
-                        <input class="last-name__input-area" type="text" name="last-name" value="{{ old('name') }}">
+                        <input class="last-name__input-area" type="text" name="last-name" value="{{ old('last-name') }}">
                         <p class="example">例）山田</p>
                     </div>
                     <div class="first-name">
-                        <input class="first-name__input-area" type="text" name="first-name" value="{{ old('name') }}">
+                        <input class="first-name__input-area" type="text" name="first-name" value="{{ old('first-name') }}">
                         <p class="example">例）太郎</p>
                     </div>
                 </div>
@@ -45,8 +45,8 @@
                         @enderror
                     </div>
                     <div class="gender">
-                        <label for="male"><input type="radio" class="gender-male" name="gender" value="1" id="male">男性</label>
-                        <label for="female"><input type="radio" class="gender-female" name="gender" value="2" id="female">女性</label>
+                        <label for="male"><input type="radio" class="gender-male" name="gender" value="1" {{ old('gender',1) == '1' ? 'checked' : '' }} id="male">男性</label>
+                        <label for="female"><input type="radio" class="gender-female" name="gender" value="2" {{ old('gender') == '2' ? 'checked' : '' }} id="female">女性</label>
                     </div>
                 </div>
 
@@ -97,7 +97,7 @@
                         @enderror
                     </div>
                     <div class="building">
-                        <input class="building__input-area" type="text" name="building" value="{{ old('building_name') }}">
+                        <input class="building__input-area" type="text" name="building" value="{{ old('building') }}">
                         <p class="example">例）千駄ヶ谷マンション101</p>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                         @enderror
                     </div>
                     <div class="opinion">
-                        <textarea class="opinion__input-area" name="content" id="" cols="30" rows="10" value="{{ old('opinion') }}"></textarea>
+                        <textarea class="opinion__input-area" name="content" id="" cols="30" rows="10" >{{ old('content') }}</textarea>
                     </div>
                 </div>
 

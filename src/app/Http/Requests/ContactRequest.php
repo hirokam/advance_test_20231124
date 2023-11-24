@@ -24,13 +24,14 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
+            'last-name' => ['required', 'string', 'max:255'],
+            'first-name' => ['required', 'string', 'max:255'],
             'gender' => 'required',
             'email' => ['required', 'email:rfc,dns'],
             'postcode' => ['required', 'regex:/^\d{3}-\d{4}$/'],
             'address' => ['required','max:255'],
             'building_name' => 'max:255',
-            'opinion' => ['required','max:120'],
+            'content' => ['required','max:120'],
         ];
     }
 
