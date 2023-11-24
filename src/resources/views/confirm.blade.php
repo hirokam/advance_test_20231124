@@ -24,19 +24,20 @@
                     <tr class="confirm-table__row">
                         <th class="confirm-table__header">お名前</th>
                         <td class="confirm-table__text">
-                            <input type="text" name="name" value="{{ $contact['last-name'] }}  {{ $contact['first-name'] }}" readonly />
+                            <input type="text" name="fullname" value="{{ $contact['last-name'] }}  {{ $contact['first-name'] }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-table__row">
                         <th class="confirm-table__header">性別</th>
                         <td class="confirm-table__text">
-                            <input type="text" name="gender" value="{{ $contact['gender'] }}" readonly />
+                            <input type="hidden" name="gender" value="{{ $contact['gender'] }}" readonly />
+                            <input type="text" name="" value="{{ $contact['gender_string'] }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-table__row">
                         <th class="confirm-table__header">メールアドレス</th>
                         <td class="confirm-table__text">
-                            <input type="email" name="email" value="{{ $contact['email'] }}" readonly />
+                        <input type="email" name="email" value="{{ $contact['email'] }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-table__row">
@@ -54,13 +55,13 @@
                     <tr class="confirm-table__row">
                         <th class="confirm-table__header">建物名</th>
                         <td class="confirm-table__text">
-                            <input type="text" name="building" value="{{ $contact['building'] }}" readonly />
+                            <input type="text" name="building_name" value="{{ $contact['building'] }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-table__row">
                         <th class="confirm-table__header">ご意見</th>
                         <td class="confirm-table__text">
-                            <input type="text" name="content" value="{{ $contact['content'] }}" readonly />
+                            <input type="text" name="opinion" value="{{ $contact['content'] }}" readonly />
                         </td>
                     </tr>
                 </table>

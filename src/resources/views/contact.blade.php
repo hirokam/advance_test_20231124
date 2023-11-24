@@ -40,8 +40,8 @@
                         {{--エラー文追加--}}
                     </div>
                     <div class="gender">
-                        <label for="male"><input type="radio" class="gender-male" name="gender" value="男性" id="male">男性</label>
-                        <label for="female"><input type="radio" class="gender-female" name="gender" value="女" id="female">女性</label>
+                        <label for="male"><input type="radio" class="gender-male" name="gender" value="1" id="male">男性</label>
+                        <label for="female"><input type="radio" class="gender-female" name="gender" value="2" id="female">女性</label>
                     </div>
                 </div>
 

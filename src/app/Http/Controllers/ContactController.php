@@ -13,10 +13,15 @@ class ContactController extends Controller
 
     public function confirm(Request $request) {
         $contact = $request->only(['last-name','first-name','gender','email','postcode','address','building','content']);
+        $gender = $contact['gender'];
+        $genderString = ($gender == 1) ? '男性' : '女性';
+        $contact['gender_string'] = $genderString;
         return view('confirm', compact('contact'));
     }
 
-    public function thanks() {
+    public function thanks(Request $request) {
+        $contacts = $request->all();
+        Contact::create($contacts);
         return view('thanks');
     }
 
