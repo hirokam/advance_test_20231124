@@ -38,9 +38,12 @@ class ContactRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => '名前を入力してください。',
-            'name.string' => '名前は文字列で入力してください。',
-            'name.max' => '名前は255文字以下で入力してください。',
+            'last-name.required' => '名字を入力してください。',
+            'last-name.string' => '名字は文字列で入力してください。',
+            'last-name.max' => '名字は255文字以下で入力してください。',
+            'first-name.required' => '名前を入力してください。',
+            'first-name.string' => '名前は文字列で入力してください。',
+            'first-name.max' => '名前は255文字以下で入力してください。',
             'gender.required' => '性別を選択してください。',
             'email.required' => 'メールアドレスを入力してください。',
             'email.email' => 'メールアドレスが正しくありません。',
@@ -49,8 +52,8 @@ class ContactRequest extends FormRequest
             'address.required' => '住所を入力してください。',
             'address.max' => '住所は255文字以下で入力してください。',
             'building_name.max' => '建物名は255文字以下で入力してください。',
-            'opinion.required' => 'ご意見を入力してください。',
-            'opinion.max' => 'ご意見は120文字以内で入力してください。',
+            'content.required' => 'ご意見を入力してください。',
+            'content.max' => 'ご意見は120文字以内で入力してください。',
         ];
     }
 
