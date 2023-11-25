@@ -61,7 +61,7 @@
                     <tr class="confirm-table__row">
                         <th class="confirm-table__header">ご意見</th>
                         <td class="confirm-table__text">
-                            <input type="text" name="opinion" value="{{ $contact['content'] }}" readonly />
+                            <input type="text" class="opinion" name="opinion" value="{{ $contact['content'] }}" readonly />
                         </td>
                     </tr>
                 </table>
