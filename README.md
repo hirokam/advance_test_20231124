@@ -35,5 +35,8 @@
 
   意見の表示制限（未実装）
 
-  ![contactform](./)
-    
+  ![contactform](contactform.png)
+
+##　作成の目的
+
+自らの学習の理解度を確認する為
