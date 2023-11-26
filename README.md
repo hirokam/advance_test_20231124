@@ -52,6 +52,6 @@
   ー　Laravel 8.x
 
 ## テーブル設計
-![table_design](table_design.jpg)
+![table_design](table_design.png)
 ## ER図
-![ER＿drawing](ER＿drawing.jpg)
+![ER＿drawing](ER＿drawing.png)
