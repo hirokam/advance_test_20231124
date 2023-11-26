@@ -24,7 +24,7 @@
                         <div class="name__index">
                             <p>お名前</p>
                         </div>
-                        <input type="text" class="name__search-area" name="fullname" value="{{$fullname}}">
+                        <input type="text" class="name__search-area" name="fullname">
                     </div>
                     <div class="gender__item">
                         <div class="gender__index">
