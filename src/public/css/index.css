@@ -10,15 +10,23 @@
 }
 
 .name__index,
-.gender__index,
 .register__index,
 .mail__index {
+    margin-left: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 150px;
+}
+
+.gender__index {
     font-size: 15px;
     font-weight: bold;
     width: 150px;
 }
 
 .search-section {
+    padding-top: 20px;
+    height: 300px;
     margin-bottom: 30px;
     border: solid 1px black;
 }
@@ -106,8 +114,25 @@ svg.w-5.h-5 {
     width: 100%;
 }
 
+.result-id,
+.result-gender {
+    width: 7.5%;
+}
+
+.result-name {
+    width: 15%;
+}
+
+.result-email {
+    width: 25%;
+}
+
+.result-opinion {
+    width: 45%;
+}
+
+
 tr {
-    table-layout: auto;
     width: 100%;
 }
 
@@ -124,5 +149,6 @@ td {
     background: black;
     color: white;
     border-radius: 3px;
-    margin-left: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
 }

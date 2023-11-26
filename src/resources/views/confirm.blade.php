@@ -17,10 +17,6 @@
             <h2>内容確認</h2>
         </div>
 
-        @if (count($errors) > 0)
-        <p>入力に問題があります。</p>
-        @endif
-
         <div class="confirm-table">
             <form action="/confirm/thanks" method="post" >
             @csrf
@@ -28,7 +24,7 @@
                     <tr class="confirm-table__row">
                         <th class="confirm-table__header">お名前</th>
                         <td class="confirm-table__text">
-                            <input type="text" name="fullname" value="{{ $contact['last-name'] }} .' '. {{ $contact['first-name'] }}" readonly />
+                            <input type="text" name="fullname" value="{{ $contact['last-name'] }} {{ $contact['first-name'] }}" readonly />
                         </td>
                     </tr>
                     <tr class="confirm-table__row">
@@ -65,7 +61,7 @@
                     <tr class="confirm-table__row">
                         <th class="confirm-table__header">ご意見</th>
                         <td class="confirm-table__text">
-                            <input type="text" name="opinion" value="{{ $contact['content'] }}" readonly />
+                            <input type="text" class="opinion" name="opinion" value="{{ $contact['content'] }}" readonly />
                         </td>
                     </tr>
                 </table>

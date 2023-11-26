@@ -24,13 +24,13 @@
                         <div class="name__index">
                             <p>お名前</p>
                         </div>
-                        <input type="text" class="name__search-area">
+                        <input type="text" class="name__search-area" name="fullname" value="{{$fullname}}">
                     </div>
                     <div class="gender__item">
                         <div class="gender__index">
                             <p>性別</p>
                         </div>
-                        <label for="all"><input type="radio"    class="gender__choice-group" name="gender">全て</label>
+                        <label for="all"><input type="radio" class="gender__choice-group" name="gender" value="全て" checked="checked">全て</label>
                         <label for="male"><input type="radio" class="gender__choice-group" name="gender">男性</label>
                         <label for="female"><input type="radio" class="gender__choice-group" name="gender">女性</label>
                     </div>
@@ -71,11 +71,11 @@
         <div class="search__result">
             <table class="result">
                 <tr>
-                    <th>ID</th>
-                    <th>お名前</th>
-                    <th>性別</th>
-                    <th>メールアドレス</th>
-                    <th>ご意見</th>
+                    <th class="result-id">ID</th>
+                    <th class="result-name">お名前</th>
+                    <th class="result-gender">性別</th>
+                    <th class="result-email">メールアドレス</th>
+                    <th class="result-opinion">ご意見</th>
                 </tr>
                 @foreach ($contacts as $contact)
                 <tr>
@@ -89,7 +89,7 @@
                         @method('DELETE')
                         @csrf
                             <input type="hidden" name="id" value="{{ $contact['id'] }}" class="">
-                            <button class="">削除</button>
+                            <button class="delete">削除</button>
                         </form>
                     </td>
                 </tr>

@@ -23,7 +23,10 @@
                 <div class="name-section">
                     <div class="section-title">
                         <p>お名前<span>※</span></p>
-                        @error('name')
+                        @error('last-name')
+                            <p class="error">{{$message}}</p>
+                        @enderror
+                        @error('first-name')
                             <p class="error">{{$message}}</p>
                         @enderror
                     </div>
@@ -105,7 +108,7 @@
                 <div class="opinion-section">
                     <div class="section-title">
                         <p>ご意見<span>※</span></p>
-                        @error('opinion')
+                        @error('content')
                             <p class="error">{{$message}}</p>
                         @enderror
                     </div>
