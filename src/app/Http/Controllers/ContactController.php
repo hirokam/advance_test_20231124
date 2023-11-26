@@ -31,6 +31,15 @@ class ContactController extends Controller
         return view('index', ['contacts' => $contacts]);
     }
 
+    public function search(Request $request) {
+        $item = Contact::where('fullname', 'LIKE',"%{$request->fullname}%")->get();
+        $param = [
+            'fullname' => $request->fullname,
+            'item' => $item
+        ];
+        return view('index', $param);
+    }
+
     public function destroy(Request $request) {
         Contact::find($request->id)->delete();
         return redirect('/index');
